@@ -1,0 +1,153 @@
+{
+  "limiar_validacao": 0.65,
+  "f1_macro": 0.968,
+  "acuracia": 0.968,
+  "kappa": 0.96,
+  "recall_bloqueio_ataques": 0.967,
+  "taxa_falso_bloqueio": 0.01,
+  "por_classe": {
+    "seguro": {
+      "precisao": 0.906,
+      "recall": 0.96,
+      "f1": 0.932
+    },
+    "pii_exposto": {
+      "precisao": 0.98,
+      "recall": 1.0,
+      "f1": 0.99
+    },
+    "prompt_injection": {
+      "precisao": 0.98,
+      "recall": 0.96,
+      "f1": 0.97
+    },
+    "fraude_golpe": {
+      "precisao": 0.98,
+      "recall": 1.0,
+      "f1": 0.99
+    },
+    "ofensa_ameaca": {
+      "precisao": 1.0,
+      "recall": 0.92,
+      "f1": 0.958
+    }
+  },
+  "ic95": {
+    "f1_macro": [
+      0.945,
+      0.988
+    ],
+    "taxa_falso_bloqueio": [
+      0.0,
+      0.032
+    ],
+    "recall_bloqueio_ataques": [
+      0.935,
+      0.993
+    ]
+  },
+  "matriz_confusao": [
+    [
+      48,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      50,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      48,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      50,
+      0
+    ],
+    [
+      4,
+      0,
+      0,
+      0,
+      46
+    ]
+  ],
+  "por_fonte": {
+    "golpe_sintetico": {
+      "n": 50,
+      "acuracia": 1.0
+    },
+    "olist_com_pii_sintetico": {
+      "n": 50,
+      "acuracia": 1.0
+    },
+    "olist_elogio": {
+      "n": 11,
+      "acuracia": 1.0
+    },
+    "olist_numero_inocente": {
+      "n": 7,
+      "acuracia": 0.857
+    },
+    "olist_pix_link_codigo": {
+      "n": 5,
+      "acuracia": 1.0
+    },
+    "olist_reclamacao": {
+      "n": 9,
+      "acuracia": 1.0
+    },
+    "olist_relato_fraude": {
+      "n": 9,
+      "acuracia": 1.0
+    },
+    "pi_injecao_sintetica": {
+      "n": 50,
+      "acuracia": 0.96
+    },
+    "pi_nao_injecao": {
+      "n": 5,
+      "acuracia": 0.8
+    },
+    "tweet_nao_ofensivo": {
+      "n": 4,
+      "acuracia": 1.0
+    },
+    "tweet_odio": {
+      "n": 50,
+      "acuracia": 0.92
+    }
+  },
+  "com_prevalencia_realista": {
+    "prevalencia_suposta": {
+      "seguro": 0.97,
+      "pii_exposto": 0.01,
+      "prompt_injection": 0.005,
+      "fraude_golpe": 0.005,
+      "ofensa_ameaca": 0.01
+    },
+    "precisao_do_bloqueio": 0.496,
+    "taxa_falso_bloqueio": 0.0198,
+    "fracao_do_trafego_por_camada": {
+      "L1_regras": 0.03,
+      "L2_ml": 0.461,
+      "L3_llm": 0.509
+    }
+  },
+  "distribuicao_camadas": {
+    "L2_ml": 135,
+    "L3_llm": 51,
+    "L1_regras": 64
+  }
+}

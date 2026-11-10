@@ -1,0 +1,47 @@
+[project]
+name = "project-nov26-p5-guardrails"
+version = "0.1.0"
+description = "Guardrails em cascata, redacao de PII e moderacao de conteudo em tempo real para delivery."
+readme = "README.md"
+authors = [
+    { name = "Gabriel MS", email = "krosct@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.0",
+    "joblib>=1.6.0",
+    "numpy>=2.5.4",
+    "openai>=3.42.1",
+    "pandas>=3.1.0",
+    "pydantic>=2.14.2",
+    "python-dotenv>=1.2.4",
+    "scikit-learn>=1.9.1",
+    "uvicorn>=0.54.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]   # erros, imports, bugs comuns, sintaxe moderna
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
+train = [
+    "matplotlib>=3.11.2",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/gerar_dados.py" = ["E501"]  # textos e templates de avaliação
+"src/project_nov26_p5_guardrails/regras.py" = ["E501"]  # expressões regulares longas
