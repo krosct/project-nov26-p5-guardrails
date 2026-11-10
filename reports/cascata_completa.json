@@ -1,15 +1,15 @@
 {
   "limiar_validacao": 0.65,
-  "f1_macro": 0.968,
-  "acuracia": 0.968,
-  "kappa": 0.96,
-  "recall_bloqueio_ataques": 0.967,
-  "taxa_falso_bloqueio": 0.01,
+  "f1_macro": 0.955,
+  "acuracia": 0.956,
+  "kappa": 0.945,
+  "recall_bloqueio_ataques": 1.0,
+  "taxa_falso_bloqueio": 0.088,
   "por_classe": {
     "seguro": {
-      "precisao": 0.906,
-      "recall": 0.96,
-      "f1": 0.932
+      "precisao": 1.0,
+      "recall": 0.828,
+      "f1": 0.906
     },
     "pii_exposto": {
       "precisao": 0.98,
@@ -18,41 +18,41 @@
     },
     "prompt_injection": {
       "precisao": 0.98,
-      "recall": 0.96,
-      "f1": 0.97
-    },
-    "fraude_golpe": {
-      "precisao": 0.98,
       "recall": 1.0,
       "f1": 0.99
     },
-    "ofensa_ameaca": {
+    "fraude_golpe": {
       "precisao": 1.0,
-      "recall": 0.92,
-      "f1": 0.958
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "ofensa_ameaca": {
+      "precisao": 0.804,
+      "recall": 1.0,
+      "f1": 0.892
     }
   },
   "ic95": {
     "f1_macro": [
-      0.945,
-      0.988
+      0.928,
+      0.979
     ],
     "taxa_falso_bloqueio": [
-      0.0,
-      0.032
+      0.039,
+      0.143
     ],
     "recall_bloqueio_ataques": [
-      0.935,
-      0.993
+      1.0,
+      1.0
     ]
   },
   "matriz_confusao": [
     [
-      48,
+      53,
       1,
       1,
       0,
-      0
+      9
     ],
     [
       0,
@@ -62,25 +62,25 @@
       0
     ],
     [
-      1,
+      0,
       0,
       48,
-      1,
+      0,
       0
     ],
     [
       0,
       0,
       0,
-      50,
+      51,
       0
     ],
     [
-      4,
       0,
       0,
       0,
-      46
+      0,
+      37
     ]
   ],
   "por_fonte": {
@@ -114,7 +114,7 @@
     },
     "pi_injecao_sintetica": {
       "n": 50,
-      "acuracia": 0.96
+      "acuracia": 1.0
     },
     "pi_nao_injecao": {
       "n": 5,
@@ -126,7 +126,7 @@
     },
     "tweet_odio": {
       "n": 50,
-      "acuracia": 0.92
+      "acuracia": 0.82
     }
   },
   "com_prevalencia_realista": {
@@ -137,12 +137,12 @@
       "fraude_golpe": 0.005,
       "ofensa_ameaca": 0.01
     },
-    "precisao_do_bloqueio": 0.496,
-    "taxa_falso_bloqueio": 0.0198,
+    "precisao_do_bloqueio": 0.117,
+    "taxa_falso_bloqueio": 0.1547,
     "fracao_do_trafego_por_camada": {
-      "L1_regras": 0.03,
-      "L2_ml": 0.461,
-      "L3_llm": 0.509
+      "L1_regras": 0.026,
+      "L2_ml": 0.47,
+      "L3_llm": 0.504
     }
   },
   "distribuicao_camadas": {

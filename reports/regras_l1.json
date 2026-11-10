@@ -1,14 +1,14 @@
 {
-  "f1_macro": 0.383,
-  "acuracia": 0.448,
-  "kappa": 0.31,
-  "recall_bloqueio_ataques": 0.12,
+  "f1_macro": 0.4,
+  "acuracia": 0.504,
+  "kappa": 0.346,
+  "recall_bloqueio_ataques": 0.132,
   "taxa_falso_bloqueio": 0.0,
   "por_classe": {
     "seguro": {
-      "precisao": 0.263,
-      "recall": 0.98,
-      "f1": 0.415
+      "precisao": 0.339,
+      "recall": 0.984,
+      "f1": 0.504
     },
     "pii_exposto": {
       "precisao": 0.978,
@@ -17,13 +17,13 @@
     },
     "prompt_injection": {
       "precisao": 1.0,
-      "recall": 0.04,
-      "f1": 0.077
+      "recall": 0.042,
+      "f1": 0.08
     },
     "fraude_golpe": {
       "precisao": 1.0,
-      "recall": 0.32,
-      "f1": 0.485
+      "recall": 0.314,
+      "f1": 0.478
     },
     "ofensa_ameaca": {
       "precisao": 0.0,
@@ -33,21 +33,21 @@
   },
   "ic95": {
     "f1_macro": [
-      0.337,
-      0.425
+      0.355,
+      0.443
     ],
     "taxa_falso_bloqueio": [
       0.0,
       0.0
     ],
     "recall_bloqueio_ataques": [
-      0.071,
-      0.174
+      0.079,
+      0.191
     ]
   },
   "matriz_confusao": [
     [
-      49,
+      63,
       1,
       0,
       0,
@@ -61,21 +61,21 @@
       0
     ],
     [
-      48,
+      46,
       0,
       2,
       0,
       0
     ],
     [
-      34,
+      35,
       0,
       0,
       16,
       0
     ],
     [
-      50,
+      37,
       0,
       0,
       0,
@@ -113,7 +113,7 @@
     },
     "pi_injecao_sintetica": {
       "n": 50,
-      "acuracia": 0.04
+      "acuracia": 0.06
     },
     "pi_nao_injecao": {
       "n": 5,
@@ -125,7 +125,7 @@
     },
     "tweet_odio": {
       "n": 50,
-      "acuracia": 0.0
+      "acuracia": 0.26
     }
   },
   "com_prevalencia_realista": {

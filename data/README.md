@@ -20,8 +20,9 @@ Não há dados pessoais reais em nenhum arquivo: bases anonimizadas não os têm
 | `taxonomia.md` | — | 5 classes, ação associada, exemplos e regras de desempate (também é o prompt do juiz LLM) |
 | `treino.csv` | 1.000 (200/classe) | Treino do classificador L2 |
 | `validacao.csv` | 150 (30/classe) | **Única** base para escolher o limiar da cascata (critério fixo em `dominio.py`) |
-| `referencia.csv` | 250 (50/classe) | Medição final; não participa de treino nem de nenhuma escolha |
-| `referencia_revisar.csv` | 15 | Desacordos entre o rótulo da referência e o juiz LLM independente, com sugestão do assistente e coluna `decisao_humana` (vazia) para **revisão humana** |
+| `referencia.csv` | 250 (50/classe antes da revisão; 64/51/50/48/37 depois) | Medição final; não participa de treino nem de nenhuma escolha |
+| `referencia_decisoes.csv` | 15 | Rótulos da referência alterados na revisão, com rótulo antes/depois e motivo |
+| `referencia_revisar.csv` | 12 | Desacordos que restam entre a referência revisada e o juiz LLM independente |
 
 Colunas: `id`, `canal`, `texto`, `rotulo`, `fonte`, `detalhe` (tipo de PII, quando aplicável).
 
@@ -33,7 +34,7 @@ Colunas: `id`, `canal`, `texto`, `rotulo`, `fonte`, `detalhe` (tipo de PII, quan
 
 ## ⚠️ Limites conhecidos
 
-- Os rótulos vêm da **construção dos dados** (fonte + regra), não de um anotador humano. A referência é auditada por um juiz LLM independente (`scripts/auditar_referencia.py`) e os desacordos ficam em `referencia_revisar.csv` até serem revisados por uma pessoa.
+- Treino e validação têm rótulo **por construção** (fonte + regra). A **referência foi revisada item a item** (250); as 15 mudanças estão em `referencia_decisoes.csv`. Treino e validação não foram revisados, então o critério de ódio da referência é mais estrito que o do treino. Um juiz LLM independente audita a referência (`scripts/auditar_referencia.py`): os desacordos restantes ficam em `referencia_revisar.csv`.
 - `fraude_golpe` e `prompt_injection` são **sintéticos**: medem o quanto o sistema detecta *esses* padrões, não golpes reais.
 - Tweets "não ofensivos" são `seguro` pela anotação da base de origem; alguns podem ser ríspidos.
 - A referência é balanceada (20% por classe); frações por camada e precisão do bloqueio em tráfego real exigem reponderar (ver README).
