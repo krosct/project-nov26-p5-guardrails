@@ -21,7 +21,7 @@ Não há dados pessoais reais em nenhum arquivo: bases anonimizadas não os têm
 | `treino.csv` | 1.000 (200/classe) | Treino do classificador L2 |
 | `validacao.csv` | 150 (30/classe) | **Única** base para escolher o limiar da cascata (critério fixo em `dominio.py`) |
 | `referencia.csv` | 250 (50/classe) | Medição final; não participa de treino nem de nenhuma escolha |
-| `referencia_revisar.csv` | variável | Desacordos entre o rótulo da referência e o juiz LLM independente, para **revisão humana** |
+| `referencia_revisar.csv` | 15 | Desacordos entre o rótulo da referência e o juiz LLM independente, com sugestão do assistente e coluna `decisao_humana` (vazia) para **revisão humana** |
 
 Colunas: `id`, `canal`, `texto`, `rotulo`, `fonte`, `detalhe` (tipo de PII, quando aplicável).
 

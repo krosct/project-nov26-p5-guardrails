@@ -78,9 +78,11 @@ Se o modelo aprendesse só o estilo da fonte, erraria as fontes que aparecem nas
 
 O L2 erra quase todos os exemplos seguros que vêm da mesma fonte de uma classe de ataque (usa o estilo como atalho em parte), e a cascata completa recupera boa parte deles via juiz LLM. Isso é um limite real do L2 treinado em 200 exemplos por classe.
 
+**Teste de atalho de fonte** ([`reports/teste_atalho_fonte.json`](reports/teste_atalho_fonte.json), `scripts/teste_atalho_fonte.py`): um classificador que só prevê a fonte do texto acerta **99,6%**, então o estilo é facilmente separável. Um baseline que ignora o conteúdo e prevê a classe mais comum de cada fonte chega a **80,0%** de acurácia na referência, contra **93,6%** do L2 (75,0% × 92,0% nas fontes que têm mais de uma classe). O L2 usa conteúdo, mas parte do resultado (até 80 pontos de 100) é explicável só pela fonte; por isso o número que importa para a qualidade real é o ganho sobre esse piso, não a acurácia absoluta.
+
 ### Auditoria dos rótulos da referência
 
-Um juiz LLM independente (rótulo sem ver a classe) concorda com **94%** da referência (kappa **0,925**; [`reports/auditoria_referencia.json`](reports/auditoria_referencia.json)). São **15 desacordos** (9 em `tweet_odio`, 4 em injeção/`pi_nao_injecao`, 1 em PII, 1 em injeção), em [`data/referencia_revisar.csv`](data/referencia_revisar.csv), que **precisam de revisão humana**: onde o juiz está certo, o rótulo da referência é que deve mudar. Antes de usar só os tweets com consenso dos 3 anotadores, a concordância em `ofensa_ameaca` era 58%, e hoje é 84%: a maioria simples da base de origem tem muito ruído.
+Um juiz LLM independente (rótulo sem ver a classe) concorda com **94%** da referência (kappa **0,925**; [`reports/auditoria_referencia.json`](reports/auditoria_referencia.json)). São **15 desacordos** (9 em `tweet_odio`, 4 em injeção/`pi_nao_injecao`, 1 em PII, 1 em injeção), em [`data/referencia_revisar.csv`](data/referencia_revisar.csv), que **precisam de revisão humana**. O arquivo traz uma sugestão do assistente por linha (não substitui o anotador): 8 manter, 6 mudar para `seguro` (tweets de opinião política sem ataque a grupo, que a base marcou como ódio), 1 ambíguo; a coluna `decisao_humana` está vazia: onde o juiz está certo, o rótulo da referência é que deve mudar. Antes de usar só os tweets com consenso dos 3 anotadores, a concordância em `ofensa_ameaca` era 58%, e hoje é 84%: a maioria simples da base de origem tem muito ruído.
 
 ![Comparação e curva de limiar da cascata](reports/cascata_tradeoff.png)
 

@@ -1,4 +1,4 @@
-"""Roda o pipeline do P5: dados → treino → avaliação → auditoria → figuras → tabelas → testes.
+"""Roda o pipeline do P5: dados, treino, avaliação, auditoria, atalho, figuras, tabelas, testes.
 
 Uso: uv run --group train python scripts/pipeline.py [opções]
   --de gerar_dados   começa nesta etapa
@@ -20,6 +20,7 @@ ETAPAS = {
     "treinar": ["scripts/treinar.py"],
     "avaliar": ["scripts/avaliar.py"],
     "auditar": ["scripts/auditar_referencia.py"],
+    "atalho": ["scripts/teste_atalho_fonte.py"],
     "figuras": ["scripts/figuras.py"],
     "tabelas": ["scripts/tabela_readme.py"],
     "testes": ["-m", "pytest", "-q"],
