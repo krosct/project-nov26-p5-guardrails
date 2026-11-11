@@ -1,5 +1,5 @@
 {
-  "acuracia_do_classificador_de_fonte": 0.996,
+  "acuracia_do_classificador_de_fonte": 0.998,
   "classe_mais_comum_por_familia": {
     "golpe": "fraude_golpe",
     "olist": "pii_exposto",
@@ -7,8 +7,8 @@
     "tweet": "ofensa_ameaca"
   },
   "acuracia_total": {
-    "atalho_so_pela_fonte": 0.74,
-    "l2": 0.88
+    "atalho_so_pela_fonte": 0.8,
+    "l2": 0.947
   },
   "familias_com_mais_de_uma_classe": [
     "olist",
@@ -16,8 +16,8 @@
     "tweet"
   ],
   "acuracia_nessas_familias": {
-    "atalho_so_pela_fonte": 0.675,
-    "l2": 0.85
+    "atalho_so_pela_fonte": 0.75,
+    "l2": 0.933
   },
   "leitura": "O classificador de fonte acerta quase tudo, então o estilo é separável. O atalho puro fica bem abaixo do L2 nas famílias com mais de uma classe: o L2 usa conteúdo, mas erra os poucos exemplos seguros que vêm da mesma fonte de uma classe de ataque."
 }

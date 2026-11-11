@@ -1,29 +1,29 @@
 {
-  "f1_macro": 0.4,
-  "acuracia": 0.504,
-  "kappa": 0.346,
-  "recall_bloqueio_ataques": 0.132,
+  "f1_macro": 0.395,
+  "acuracia": 0.453,
+  "kappa": 0.317,
+  "recall_bloqueio_ataques": 0.133,
   "taxa_falso_bloqueio": 0.0,
   "por_classe": {
     "seguro": {
-      "precisao": 0.339,
-      "recall": 0.984,
-      "f1": 0.504
+      "precisao": 0.266,
+      "recall": 0.989,
+      "f1": 0.42
     },
     "pii_exposto": {
-      "precisao": 0.978,
-      "recall": 0.9,
-      "f1": 0.938
+      "precisao": 0.988,
+      "recall": 0.878,
+      "f1": 0.929
     },
     "prompt_injection": {
       "precisao": 1.0,
-      "recall": 0.042,
-      "f1": 0.08
+      "recall": 0.067,
+      "f1": 0.125
     },
     "fraude_golpe": {
       "precisao": 1.0,
-      "recall": 0.314,
-      "f1": 0.478
+      "recall": 0.333,
+      "f1": 0.5
     },
     "ofensa_ameaca": {
       "precisao": 0.0,
@@ -33,49 +33,49 @@
   },
   "ic95": {
     "f1_macro": [
-      0.355,
-      0.443
+      0.358,
+      0.428
     ],
     "taxa_falso_bloqueio": [
       0.0,
       0.0
     ],
     "recall_bloqueio_ataques": [
-      0.079,
-      0.191
+      0.092,
+      0.175
     ]
   },
   "matriz_confusao": [
     [
-      63,
+      89,
       1,
       0,
       0,
       0
     ],
     [
-      5,
-      45,
+      11,
+      79,
       0,
       0,
       0
     ],
     [
-      46,
+      84,
       0,
-      2,
+      6,
       0,
       0
     ],
     [
-      35,
+      60,
       0,
       0,
-      16,
+      30,
       0
     ],
     [
-      37,
+      90,
       0,
       0,
       0,
@@ -84,48 +84,48 @@
   ],
   "por_fonte": {
     "golpe_sintetico": {
-      "n": 50,
-      "acuracia": 0.32
+      "n": 90,
+      "acuracia": 0.333
     },
     "olist_com_pii_sintetico": {
-      "n": 50,
-      "acuracia": 0.9
+      "n": 90,
+      "acuracia": 0.878
     },
     "olist_elogio": {
-      "n": 11,
+      "n": 20,
       "acuracia": 1.0
     },
     "olist_numero_inocente": {
-      "n": 7,
-      "acuracia": 0.857
+      "n": 12,
+      "acuracia": 0.917
     },
     "olist_pix_link_codigo": {
-      "n": 5,
+      "n": 9,
       "acuracia": 1.0
     },
     "olist_reclamacao": {
-      "n": 9,
+      "n": 17,
       "acuracia": 1.0
     },
     "olist_relato_fraude": {
-      "n": 9,
+      "n": 16,
       "acuracia": 1.0
     },
     "pi_injecao_sintetica": {
-      "n": 50,
-      "acuracia": 0.06
+      "n": 90,
+      "acuracia": 0.067
     },
     "pi_nao_injecao": {
-      "n": 5,
+      "n": 8,
       "acuracia": 1.0
     },
     "tweet_nao_ofensivo": {
-      "n": 4,
+      "n": 8,
       "acuracia": 1.0
     },
     "tweet_odio": {
-      "n": 50,
-      "acuracia": 0.26
+      "n": 90,
+      "acuracia": 0.0
     }
   },
   "com_prevalencia_realista": {

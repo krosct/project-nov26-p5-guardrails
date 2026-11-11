@@ -1,45 +1,45 @@
 {
   "limiar_validacao": 0.65,
-  "f1_macro": 0.885,
-  "acuracia": 0.884,
-  "kappa": 0.855,
+  "f1_macro": 0.937,
+  "acuracia": 0.938,
+  "kappa": 0.922,
   "recall_bloqueio_ataques": 1.0,
-  "taxa_falso_bloqueio": 0.211,
+  "taxa_falso_bloqueio": 0.1,
   "por_classe": {
     "seguro": {
-      "precisao": 0.932,
-      "recall": 0.641,
-      "f1": 0.759
+      "precisao": 0.902,
+      "recall": 0.822,
+      "f1": 0.86
     },
     "pii_exposto": {
-      "precisao": 0.978,
-      "recall": 0.9,
-      "f1": 0.938
+      "precisao": 0.988,
+      "recall": 0.878,
+      "f1": 0.929
     },
     "prompt_injection": {
-      "precisao": 0.889,
-      "recall": 1.0,
-      "f1": 0.941
+      "precisao": 0.918,
+      "recall": 0.989,
+      "f1": 0.952
     },
     "fraude_golpe": {
       "precisao": 1.0,
-      "recall": 0.98,
-      "f1": 0.99
+      "recall": 1.0,
+      "f1": 1.0
     },
     "ofensa_ameaca": {
-      "precisao": 0.661,
+      "precisao": 0.891,
       "recall": 1.0,
-      "f1": 0.796
+      "f1": 0.942
     }
   },
   "ic95": {
     "f1_macro": [
-      0.844,
-      0.92
+      0.912,
+      0.958
     ],
     "taxa_falso_bloqueio": [
-      0.138,
-      0.287
+      0.058,
+      0.145
     ],
     "recall_bloqueio_ataques": [
       1.0,
@@ -48,85 +48,85 @@
   },
   "matriz_confusao": [
     [
-      41,
+      74,
       1,
-      6,
+      8,
       0,
-      16
+      7
     ],
     [
-      3,
-      45,
+      8,
+      79,
       0,
       0,
-      2
-    ],
-    [
-      0,
-      0,
-      48,
-      0,
-      0
+      3
     ],
     [
       0,
       0,
+      89,
       0,
-      50,
       1
     ],
     [
       0,
       0,
       0,
+      90,
+      0
+    ],
+    [
       0,
-      37
+      0,
+      0,
+      0,
+      90
     ]
   ],
   "por_fonte": {
     "golpe_sintetico": {
-      "n": 50,
+      "n": 90,
       "acuracia": 1.0
     },
     "olist_com_pii_sintetico": {
-      "n": 50,
-      "acuracia": 0.9
+      "n": 90,
+      "acuracia": 0.878
     },
     "olist_elogio": {
-      "n": 11,
+      "n": 20,
       "acuracia": 1.0
     },
     "olist_numero_inocente": {
-      "n": 7,
-      "acuracia": 0.857
+      "n": 12,
+      "acuracia": 0.917
     },
     "olist_pix_link_codigo": {
-      "n": 5,
+      "n": 9,
       "acuracia": 1.0
     },
     "olist_reclamacao": {
-      "n": 9,
+      "n": 17,
       "acuracia": 1.0
     },
     "olist_relato_fraude": {
-      "n": 9,
+      "n": 16,
       "acuracia": 1.0
     },
     "pi_injecao_sintetica": {
-      "n": 50,
-      "acuracia": 0.96
+      "n": 90,
+      "acuracia": 0.989
     },
     "pi_nao_injecao": {
-      "n": 5,
+      "n": 8,
       "acuracia": 0.0
     },
     "tweet_nao_ofensivo": {
-      "n": 4,
-      "acuracia": 0.25
+      "n": 8,
+      "acuracia": 0.125
     },
     "tweet_odio": {
-      "n": 50,
-      "acuracia": 0.74
+      "n": 90,
+      "acuracia": 1.0
     }
   },
   "com_prevalencia_realista": {
@@ -137,11 +137,11 @@
       "fraude_golpe": 0.005,
       "ofensa_ameaca": 0.01
     },
-    "precisao_do_bloqueio": 0.057,
-    "taxa_falso_bloqueio": 0.3407,
+    "precisao_do_bloqueio": 0.11,
+    "taxa_falso_bloqueio": 0.1653,
     "fracao_do_trafego_por_camada": {
-      "L1_regras": 0.026,
-      "L2_ml": 0.974
+      "L1_regras": 0.022,
+      "L2_ml": 0.978
     }
   }
 }

@@ -26,6 +26,7 @@ data/*
 !data/referencia.csv
 !data/validacao.csv
 !data/treino.csv
+!data/revisao_anterior_discordancias.csv
 !data/referencia_revisar.csv
 
 # ===== Modelos e caches =====

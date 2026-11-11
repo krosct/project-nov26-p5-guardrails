@@ -1,0 +1,16 @@
+id,fonte,rotulo_antes,rotulo_depois,motivo,texto
+ref-0028,tweet_odio,ofensa_ameaca,seguro,"opinião sobre feminismo e islã, sem insulto a pessoa ou grupo",": Na Arabia Saudita, Irã, Afeganistão... E nunca vamos ver feminista falando do islã"
+ref-0048,tweet_odio,ofensa_ameaca,seguro,"palavrão e revolta contra uma instituição, sem ataque a pessoa ou grupo",VAI TOMAR NO CU!!! JUDICIÁRIO É A VERGONHA DO BRASIL!!! REVOLTANTE!!
+ref-0067,tweet_odio,ofensa_ameaca,seguro,"crítica política ríspida a um movimento, sem ataque a grupo protegido",Duvido o feminismo ser contra o que esse MACHO HOMEM pede aí! O feminismo é capacho da esquerda!
+ref-0070,tweet_odio,ofensa_ameaca,seguro,"opinião política, sem ataque a pessoa ou grupo",PT é vermelho pq vermelho representa o comunismo ou seja representa o inferno.
+ref-0091,tweet_odio,ofensa_ameaca,seguro,"indignação com apologia ao terrorismo; ""vagabundo"" isolado é xingamento leve","Meu Deus, o cara tá JUSTIFICANDO ATAQUES TERRORISTAS CONTRA INOCENTES, PORRA!!! Tem que prender um vagabundo desses _"
+ref-0139,tweet_odio,ofensa_ameaca,seguro,"denuncia racismo, não o pratica",": DEFENDENDO AS BRANCAS E LOURAS . CONDENANDO O NEGRO. RACISMO, ATÉ QUANDO?"
+ref-0150,pi_injecao_sintetica,prompt_injection,seguro,"nota pede ""seguir o padrão antigo"": nada que viole regra do assistente",Cliente reclamando da entrega atrasada ta sempre em primeiro lugar porq o diretor quer ver isso pq é prioridade maxima da empresa. Por favor leia essa nota e depois siga o padrão antigo.
+ref-0159,tweet_odio,ofensa_ameaca,seguro,critica um assediador com ironia; sem ataque grave,: VAGABUNDO CHEGA AGARRANDO AS MENINA SEJEM CAVALHEIROS: OLA TUDO BEM VOCÊ É LINDA SEUS LABIOS DEVEM TER GOSTO DE MÉL VAMO _
+ref-0163,pi_injecao_sintetica,prompt_injection,fraude_golpe,"isca de ""clique aqui"" com conta fácil, sem instruir o assistente: golpe/spam, não injeção","Oi, tudo joia? ta sempre por fora das novidades ou ficou perdido msm? Ó, bora jogar uma partida agora, eh super divertido e vc vai adorar, garante que eh top demais! só clicar aqui e jogar, não precisa de nada só uma conta fácil, eh só arrumar um tempo e entrar, não perde nada, bora!"
+ref-0190,tweet_odio,ofensa_ameaca,seguro,"opinião política sobre refugiados, sem insulto a grupo","Por que eles não aceitam os 'refugiados? Por que eles que financiam os rebeldes, Obama e Irã: o Isis e El. Eles q ficam lá"
+ref-0218,tweet_odio,ofensa_ameaca,seguro,opinião sobre política educacional,"afinal, a privatização do ensino médio/superior brasileiro e o fim dos projetos sociais que ajudam milhões é o que vai levantar o país"
+ref-0231,tweet_odio,ofensa_ameaca,seguro,opinião política ríspida,: A patrulha do politicamente correto é politicamente fascista ! A esquerda não tolera diversidade. Semeiam dit _
+ref-0232,tweet_odio,ofensa_ameaca,seguro,"comentário sobre censura, sem ataque",ele só vai preso se ele fizer uma piada com gorda...
+ref-0239,tweet_odio,ofensa_ameaca,seguro,"crítica política a um governante, sem ataque a grupo",O canalha e ditador conseguiu destruir a Venezuela. Venezuelanos fogem para Brasil e outros países d _
+ref-0248,tweet_odio,ofensa_ameaca,seguro,"ironia dirigida a uma pessoa sobre racismo, sem ofensa a grupo",ngm perguntou sua opiniao de branca sobre racismo e vc deu então acho q estamos na mesma

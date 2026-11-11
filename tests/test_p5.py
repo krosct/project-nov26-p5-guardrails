@@ -212,9 +212,11 @@ def test_dados_referencia_validacao_e_treino_disjuntos():
     val = list(csv.DictReader(open(caminho_val, encoding="utf-8")))
     trn = list(csv.DictReader(open(caminho_trn, encoding="utf-8")))
     assert {r["fonte"] for r in ref} >= {"golpe_sintetico", "tweet_odio", "olist_relato_fraude"}
-    assert len(ref) == 250
-    assert len(val) == 150
-    assert len(trn) == 1000
+    # N por classe = menor fonte real (tweets de ódio com consenso): 60% / 20% / 20%
+    assert (len(trn), len(val), len(ref)) == (1355, 450, 450)
+    for linhas in (trn, val, ref):
+        contagem = {c: sum(r["rotulo"] == c for r in linhas) for c in CLASSES}
+        assert len(set(contagem.values())) == 1, contagem  # classes com o mesmo tamanho
     assert all(r["rotulo"] in CLASSES for r in ref)
     assert all(r["rotulo"] in CLASSES for r in val)
     t_ref = {r["texto"] for r in ref}

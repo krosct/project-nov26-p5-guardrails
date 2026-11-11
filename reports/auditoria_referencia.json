@@ -1,27 +1,27 @@
 {
-  "n": 250,
+  "n": 450,
   "sem_rotulo_do_llm": 0,
-  "concordancia": 0.952,
-  "kappa": 0.94,
+  "concordancia": 0.964,
+  "kappa": 0.956,
   "concordancia_por_classe": {
-    "seguro": 0.875,
-    "pii_exposto": 0.98,
-    "prompt_injection": 0.958,
+    "seguro": 0.967,
+    "pii_exposto": 0.989,
+    "prompt_injection": 0.956,
     "fraude_golpe": 1.0,
-    "ofensa_ameaca": 0.973
+    "ofensa_ameaca": 0.911
   },
   "concordancia_por_fonte": {
     "golpe_sintetico": 1.0,
-    "olist_com_pii_sintetico": 0.98,
+    "olist_com_pii_sintetico": 0.989,
     "olist_elogio": 1.0,
     "olist_numero_inocente": 1.0,
     "olist_pix_link_codigo": 1.0,
     "olist_reclamacao": 1.0,
     "olist_relato_fraude": 1.0,
-    "pi_injecao_sintetica": 0.96,
-    "pi_nao_injecao": 0.6,
+    "pi_injecao_sintetica": 0.956,
+    "pi_nao_injecao": 0.625,
     "tweet_nao_ofensivo": 1.0,
-    "tweet_odio": 0.86
+    "tweet_odio": 0.911
   },
-  "desacordos_para_revisao_humana": 12
+  "desacordos_para_revisao_humana": 16
 }
